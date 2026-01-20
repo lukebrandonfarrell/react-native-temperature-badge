@@ -9,10 +9,15 @@ export function getColorForKelvin(
   scale: ReadonlyArray<{ kelvin: number; color: string }>
 ): string {
   if (scale.length === 0) return '#94A3B8';
-  if (kelvin < scale[0].kelvin) return scale[0].color;
+  const firstEntry = scale[0];
+  if (!firstEntry) return '#94A3B8';
+  if (kelvin < firstEntry.kelvin) return firstEntry.color;
   let i = 0;
   for (let j = 0; j < scale.length; j++) {
-    if (scale[j].kelvin <= kelvin) i = j;
+    const entry = scale[j];
+    if (entry && entry.kelvin <= kelvin) i = j;
   }
-  return scale[i].color;
+  const selectedEntry = scale[i];
+  if (!selectedEntry) return '#94A3B8';
+  return selectedEntry.color;
 }
