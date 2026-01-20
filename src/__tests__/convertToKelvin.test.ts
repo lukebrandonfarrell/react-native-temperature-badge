@@ -29,13 +29,17 @@ describe('convertToKelvin', () => {
 
   it('should throw RangeError for negative kelvin result', () => {
     expect(() => convertToKelvin(-300, 'celsius')).toThrow(RangeError);
-    expect(() => convertToKelvin(-300, 'celsius')).toThrow('Kelvin cannot be negative');
+    expect(() => convertToKelvin(-300, 'celsius')).toThrow(
+      'Kelvin cannot be negative'
+    );
   });
 
   it('should throw RangeError for fahrenheit that results in negative kelvin', () => {
     // -500°F would result in negative kelvin
     expect(() => convertToKelvin(-500, 'fahrenheit')).toThrow(RangeError);
-    expect(() => convertToKelvin(-500, 'fahrenheit')).toThrow('Kelvin cannot be negative');
+    expect(() => convertToKelvin(-500, 'fahrenheit')).toThrow(
+      'Kelvin cannot be negative'
+    );
   });
 
   it('should allow zero kelvin', () => {

@@ -22,9 +22,12 @@ export function TemperatureFrame({
   accessibilityLabel,
   ...rest
 }: TemperatureFrameProps) {
-  const { valueInKelvin, displayValue, displayUnit, colorScale } = useTemperature();
+  const { valueInKelvin, displayValue, displayUnit, colorScale } =
+    useTemperature();
   const backgroundColor = getColorForKelvin(valueInKelvin, colorScale);
-  const defaultAccessibilityLabel = `${displayValue.toFixed(2)} degrees ${unitName[displayUnit]}`;
+  const defaultAccessibilityLabel = `${displayValue.toFixed(2)} degrees ${
+    unitName[displayUnit]
+  }`;
 
   const baseStyle = {
     paddingHorizontal: 12,

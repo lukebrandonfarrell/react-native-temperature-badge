@@ -65,7 +65,9 @@ const TemperatureContext = createContext<TemperatureContextValue | null>(null);
 export function useTemperature() {
   const ctx = useContext(TemperatureContext);
   if (!ctx) {
-    throw new Error('TemperatureLabel and TemperatureFrame must be used within TemperatureProvider');
+    throw new Error(
+      'TemperatureLabel and TemperatureFrame must be used within TemperatureProvider'
+    );
   }
   return ctx;
 }
@@ -117,7 +119,9 @@ function resolveColorScale(props: {
         } else if ('fahrenheit' in e) {
           kelvin = convertToKelvin(e.fahrenheit, 'fahrenheit');
         } else {
-          throw new Error('ColorScaleEntry must have celsius, fahrenheit, or kelvin');
+          throw new Error(
+            'ColorScaleEntry must have celsius, fahrenheit, or kelvin'
+          );
         }
         return { kelvin, color: e.color };
       })
@@ -146,7 +150,10 @@ export function TemperatureProvider({
     () => ({
       displayValue: value,
       displayUnit: display,
-      valueInKelvin: Temperature.convert(value, { from: display, to: 'kelvin' }),
+      valueInKelvin: Temperature.convert(value, {
+        from: display,
+        to: 'kelvin',
+      }),
       unitSymbol: getUnitSymbol(display),
       colorScale: resolveColorScale({ colors, colorScale }),
     }),
@@ -154,6 +161,8 @@ export function TemperatureProvider({
   );
 
   return (
-    <TemperatureContext.Provider value={ctx}>{children}</TemperatureContext.Provider>
+    <TemperatureContext.Provider value={ctx}>
+      {children}
+    </TemperatureContext.Provider>
   );
 }
