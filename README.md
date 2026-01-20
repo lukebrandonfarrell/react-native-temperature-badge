@@ -10,7 +10,7 @@ A cross-platform temperature badge component for React Native and web. Display t
 - ➡️ **Conversion:** Imperative `Temperature.convert()` for converting between units
 - ➡️ **Color scale:** Default 6-band scale (very cold → hot); override specific bands or provide a custom scale
 - ➡️ **Composable:** `TemperatureProvider`, `TemperatureFrame`, and `TemperatureLabel` for flexible layout
-- ➡️ **Accessible:** Sensible `accessibilityLabel`s; `TemperatureFrame` forwards `Pressable` props
+- ➡️ **Accessible:** Sensible `accessibilityLabel`; `TemperatureFrame` forwards `Pressable` props.
 - ➡️ **Cross-platform:** React Native (iOS, Android) and web
 
 ---
