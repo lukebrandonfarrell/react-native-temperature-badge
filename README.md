@@ -2,14 +2,16 @@
 
 A cross-platform temperature badge component for React Native and web. Display temperature values in a color-coded pill/badge, with support for Celsius, Fahrenheit, and Kelvin. Built with React Native’s `Pressable` and `Text` for full accessibility and theming.
 
+![Example app showcasing temperature badge variants: units, default and custom color scales, square and pill frames, and label styles](react-native-temperaturte-badge-example.png)
+
 ## Features
 
-- **Units:** Celsius (°C), Fahrenheit (°F), and Kelvin (K)
-- **Conversion:** Imperative `Temperature.convert()` for converting between units
-- **Color scale:** Default 6-band scale (very cold → hot); override specific bands or provide a custom scale
-- **Composable:** `TemperatureProvider`, `TemperatureFrame`, and `TemperatureLabel` for flexible layout
-- **Accessible:** Sensible `accessibilityLabel`s; `TemperatureFrame` forwards `Pressable` props
-- **Cross-platform:** React Native (iOS, Android) and web
+➡️ **Units:** Celsius (°C), Fahrenheit (°F), and Kelvin (K)
+➡️ **Conversion:** Imperative `Temperature.convert()` for converting between units
+➡️ **Color scale:** Default 6-band scale (very cold → hot); override specific bands or provide a custom scale
+➡️ **Composable:** `TemperatureProvider`, `TemperatureFrame`, and `TemperatureLabel` for flexible layout
+➡️ **Accessible:** Sensible `accessibilityLabel`s; `TemperatureFrame` forwards `Pressable` props
+➡️ **Cross-platform:** React Native (iOS, Android) and web
 
 ---
 

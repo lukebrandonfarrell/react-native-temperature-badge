@@ -10346,11 +10346,12 @@ __metadata:
     react-native: "npm:0.81.5"
     react-native-builder-bob: "npm:^0.40.17"
     react-native-monorepo-config: "npm:^0.3.1"
+    react-native-temperature-badge: "workspace:*"
     react-native-web: "npm:~0.21.0"
   languageName: unknown
   linkType: soft
 
-"react-native-temperature-badge@workspace:.":
+"react-native-temperature-badge@workspace:*, react-native-temperature-badge@workspace:.":
   version: 0.0.0-use.local
   resolution: "react-native-temperature-badge@workspace:."
   dependencies:
