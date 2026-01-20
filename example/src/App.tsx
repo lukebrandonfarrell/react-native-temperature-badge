@@ -42,31 +42,66 @@ export default function App() {
 
       <Section title="Temperatures (default scale)">
         <TemperatureProvider value={-5} display="celsius">
-          <TemperatureFrame><TemperatureLabel /></TemperatureFrame>
+          <TemperatureFrame>
+            <TemperatureLabel />
+          </TemperatureFrame>
         </TemperatureProvider>
         <TemperatureProvider value={8} display="celsius">
-          <TemperatureFrame><TemperatureLabel /></TemperatureFrame>
+          <TemperatureFrame>
+            <TemperatureLabel />
+          </TemperatureFrame>
         </TemperatureProvider>
         <TemperatureProvider value={18} display="celsius">
-          <TemperatureFrame><TemperatureLabel /></TemperatureFrame>
+          <TemperatureFrame>
+            <TemperatureLabel />
+          </TemperatureFrame>
         </TemperatureProvider>
         <TemperatureProvider value={28} display="celsius">
-          <TemperatureFrame><TemperatureLabel /></TemperatureFrame>
+          <TemperatureFrame>
+            <TemperatureLabel />
+          </TemperatureFrame>
         </TemperatureProvider>
         <TemperatureProvider value={38} display="celsius">
-          <TemperatureFrame><TemperatureLabel /></TemperatureFrame>
+          <TemperatureFrame>
+            <TemperatureLabel />
+          </TemperatureFrame>
         </TemperatureProvider>
       </Section>
 
       <Section title="Custom band colors">
-        <TemperatureProvider value={20} display="celsius" colors={{ warm: '#FF6B9D', hot: '#C44569' }}>
-          <TemperatureFrame><TemperatureLabel /></TemperatureFrame>
+        <TemperatureProvider
+          value={20}
+          display="celsius"
+          colors={{ warm: '#FF6B9D', hot: '#C44569' }}
+        >
+          <TemperatureFrame>
+            <TemperatureLabel />
+          </TemperatureFrame>
         </TemperatureProvider>
-        <TemperatureProvider value={20} display="celsius" colors={{ cold: '#0EA5E9', cool: '#06B6D4', mild: '#10B981' }}>
-          <TemperatureFrame><TemperatureLabel /></TemperatureFrame>
+        <TemperatureProvider
+          value={20}
+          display="celsius"
+          colors={{ cold: '#0EA5E9', cool: '#06B6D4', mild: '#10B981' }}
+        >
+          <TemperatureFrame>
+            <TemperatureLabel />
+          </TemperatureFrame>
         </TemperatureProvider>
-        <TemperatureProvider value={25} display="celsius" colors={{ veryCold: '#A78BFA', cold: '#C084FC', cool: '#E879F9', mild: '#F472B6', warm: '#FB923C', hot: '#FBBF24' }}>
-          <TemperatureFrame><TemperatureLabel /></TemperatureFrame>
+        <TemperatureProvider
+          value={25}
+          display="celsius"
+          colors={{
+            veryCold: '#A78BFA',
+            cold: '#C084FC',
+            cool: '#E879F9',
+            mild: '#F472B6',
+            warm: '#FB923C',
+            hot: '#FBBF24',
+          }}
+        >
+          <TemperatureFrame>
+            <TemperatureLabel />
+          </TemperatureFrame>
         </TemperatureProvider>
       </Section>
 
@@ -81,7 +116,9 @@ export default function App() {
             { celsius: 40, color: '#EF4444' },
           ]}
         >
-          <TemperatureFrame><TemperatureLabel /></TemperatureFrame>
+          <TemperatureFrame>
+            <TemperatureLabel />
+          </TemperatureFrame>
         </TemperatureProvider>
         <TemperatureProvider
           value={72}
@@ -92,7 +129,9 @@ export default function App() {
             { fahrenheit: 100, color: '#F59E0B' },
           ]}
         >
-          <TemperatureFrame><TemperatureLabel /></TemperatureFrame>
+          <TemperatureFrame>
+            <TemperatureLabel />
+          </TemperatureFrame>
         </TemperatureProvider>
         <TemperatureProvider
           value={10}
@@ -102,7 +141,9 @@ export default function App() {
             { celsius: 30, color: '#F8FAFC' },
           ]}
         >
-          <TemperatureFrame><TemperatureLabel /></TemperatureFrame>
+          <TemperatureFrame>
+            <TemperatureLabel />
+          </TemperatureFrame>
         </TemperatureProvider>
       </Section>
 
@@ -113,12 +154,26 @@ export default function App() {
           </TemperatureFrame>
         </TemperatureProvider>
         <TemperatureProvider value={21} display="celsius">
-          <TemperatureFrame style={{ borderRadius: 6, paddingHorizontal: 8, paddingVertical: 4 }}>
+          <TemperatureFrame
+            style={{
+              borderRadius: 6,
+              paddingHorizontal: 8,
+              paddingVertical: 4,
+            }}
+          >
             <TemperatureLabel style={{ fontSize: 12 }} />
           </TemperatureFrame>
         </TemperatureProvider>
         <TemperatureProvider value={21} display="celsius">
-          <TemperatureFrame style={{ borderRadius: 0, paddingHorizontal: 16, paddingVertical: 10, borderWidth: 2, borderColor: 'rgba(0,0,0,0.2)' }}>
+          <TemperatureFrame
+            style={{
+              borderRadius: 0,
+              paddingHorizontal: 16,
+              paddingVertical: 10,
+              borderWidth: 2,
+              borderColor: 'rgba(0,0,0,0.2)',
+            }}
+          >
             <TemperatureLabel />
           </TemperatureFrame>
         </TemperatureProvider>
@@ -126,17 +181,35 @@ export default function App() {
 
       <Section title="Huge text & chunky">
         <TemperatureProvider value={24} display="celsius">
-          <TemperatureFrame style={{ paddingHorizontal: 20, paddingVertical: 12, borderRadius: 12 }}>
+          <TemperatureFrame
+            style={{
+              paddingHorizontal: 20,
+              paddingVertical: 12,
+              borderRadius: 12,
+            }}
+          >
             <TemperatureLabel style={{ fontSize: 28, fontWeight: '800' }} />
           </TemperatureFrame>
         </TemperatureProvider>
         <TemperatureProvider value={24} display="celsius">
-          <TemperatureFrame style={{ paddingHorizontal: 28, paddingVertical: 16, borderRadius: 16 }}>
+          <TemperatureFrame
+            style={{
+              paddingHorizontal: 28,
+              paddingVertical: 16,
+              borderRadius: 16,
+            }}
+          >
             <TemperatureLabel style={{ fontSize: 36, fontWeight: '700' }} />
           </TemperatureFrame>
         </TemperatureProvider>
         <TemperatureProvider value={24} display="celsius">
-          <TemperatureFrame style={{ paddingHorizontal: 32, paddingVertical: 18, borderRadius: 999 }}>
+          <TemperatureFrame
+            style={{
+              paddingHorizontal: 32,
+              paddingVertical: 18,
+              borderRadius: 999,
+            }}
+          >
             <TemperatureLabel style={{ fontSize: 42, fontWeight: '900' }} />
           </TemperatureFrame>
         </TemperatureProvider>
@@ -145,16 +218,27 @@ export default function App() {
       <Section title="Label styles">
         <TemperatureProvider value={19} display="celsius">
           <TemperatureFrame>
-            <TemperatureLabel style={{ color: '#FFF', textShadowColor: 'rgba(0,0,0,0.3)', textShadowOffset: { width: 0, height: 1 }, textShadowRadius: 2 }} />
+            <TemperatureLabel
+              style={{
+                color: '#FFF',
+                textShadowColor: 'rgba(0,0,0,0.3)',
+                textShadowOffset: { width: 0, height: 1 },
+                textShadowRadius: 2,
+              }}
+            />
           </TemperatureFrame>
         </TemperatureProvider>
         <TemperatureProvider value={19} display="celsius">
           <TemperatureFrame style={{ borderRadius: 0 }}>
-            <TemperatureLabel style={{ fontSize: 11, fontWeight: '400', letterSpacing: 1 }} />
+            <TemperatureLabel
+              style={{ fontSize: 11, fontWeight: '400', letterSpacing: 1 }}
+            />
           </TemperatureFrame>
         </TemperatureProvider>
         <TemperatureProvider value={19} display="celsius">
-          <TemperatureFrame style={{ paddingHorizontal: 24, paddingVertical: 10 }}>
+          <TemperatureFrame
+            style={{ paddingHorizontal: 24, paddingVertical: 10 }}
+          >
             <TemperatureLabel style={{ fontSize: 20, fontWeight: '300' }} />
           </TemperatureFrame>
         </TemperatureProvider>
@@ -170,7 +254,13 @@ export default function App() {
             { celsius: 50, color: '#DC2626' },
           ]}
         >
-          <TemperatureFrame style={{ borderRadius: 4, paddingHorizontal: 24, paddingVertical: 14 }}>
+          <TemperatureFrame
+            style={{
+              borderRadius: 4,
+              paddingHorizontal: 24,
+              paddingVertical: 14,
+            }}
+          >
             <TemperatureLabel style={{ fontSize: 24, fontWeight: '800' }} />
           </TemperatureFrame>
         </TemperatureProvider>
@@ -182,7 +272,13 @@ export default function App() {
             { fahrenheit: 50, color: '#FEF3C7' },
           ]}
         >
-          <TemperatureFrame style={{ borderRadius: 0, paddingHorizontal: 20, paddingVertical: 12 }}>
+          <TemperatureFrame
+            style={{
+              borderRadius: 0,
+              paddingHorizontal: 20,
+              paddingVertical: 12,
+            }}
+          >
             <TemperatureLabel style={{ fontSize: 18, fontWeight: '600' }} />
           </TemperatureFrame>
         </TemperatureProvider>
