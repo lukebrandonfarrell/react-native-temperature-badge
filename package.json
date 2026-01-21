@@ -1,6 +1,6 @@
 {
   "name": "react-native-temperature-badge",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "A cross-platform temperature badge component for React Native and web.and web",
   "main": "./lib/module/index.js",
   "types": "./lib/typescript/src/index.d.ts",
