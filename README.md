@@ -1,4 +1,4 @@
-# react-native-temperature-badge
+# React Native Temperature Badge
 
 A cross-platform temperature badge component for React Native and web. Display temperature values in a color-coded pill/badge, with support for Celsius, Fahrenheit, and Kelvin. Built with React Native’s `Pressable` and `Text` for full accessibility and theming.
 
@@ -31,6 +31,41 @@ yarn add react-native-temperature-badge
 
 - `react` (any version)
 - `react-native` (any version)
+- `react-native-web` (any version) — Required for web support
+
+### Web support
+
+This library works on web using [`react-native-web`](https://github.com/necolas/react-native-web), which provides web-compatible implementations of React Native components (`Pressable`, `Text`, etc.).
+
+**For Expo projects:** Web support works out of the box. Expo automatically configures `react-native-web` and handles the bundler setup. Just run `expo start --web` or press `w` in the Expo CLI.
+
+**For other React Native web setups:** Ensure `react-native-web` is installed and your bundler is configured to alias `react-native` to `react-native-web`:
+
+```sh
+npm install react-native-web
+# or
+yarn add react-native-web
+```
+
+**Webpack configuration example:**
+```js
+resolve: {
+  alias: {
+    'react-native$': 'react-native-web',
+  },
+}
+```
+
+**Vite configuration example:**
+```js
+resolve: {
+  alias: {
+    'react-native': 'react-native-web',
+  },
+}
+```
+
+The library uses standard React Native APIs (`Pressable`, `Text`) that `react-native-web` supports, so no additional configuration is needed beyond the bundler alias.
 
 ---
 

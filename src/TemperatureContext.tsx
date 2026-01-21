@@ -27,12 +27,12 @@ type ResolvedColorScaleEntry = { kelvin: number; color: string };
  * Stored in Kelvin. Use as-is, override with `colors`, or replace with `colorScale`.
  */
 export const DEFAULT_TEMPERATURE_COLOR_SCALE: ResolvedColorScaleEntry[] = [
-  { kelvin: K(-10), color: '#94A3B8' },
-  { kelvin: K(-10), color: '#7DD3FC' },
-  { kelvin: K(5), color: '#A5F3FC' },
-  { kelvin: K(15), color: '#A7F3D0' },
-  { kelvin: K(25), color: '#FCD34D' },
-  { kelvin: K(32), color: '#F87171' },
+  { kelvin: K(-5), color: '#d8d8e6' },
+  { kelvin: K(0), color: '#0e8de3' },
+  { kelvin: K(5), color: '#42c3ff' },
+  { kelvin: K(15), color: '#ffc342' },
+  { kelvin: K(25), color: '#ff8142' },
+  { kelvin: K(32), color: '#ff0000' },
 ];
 
 const DEFAULT_BAND_ORDER: DefaultScaleBand[] = [
@@ -58,6 +58,7 @@ export type TemperatureContextValue = {
   valueInKelvin: number;
   unitSymbol: string;
   colorScale: ResolvedColorScaleEntry[];
+  animate: boolean;
 };
 
 const TemperatureContext = createContext<TemperatureContextValue | null>(null);
@@ -87,6 +88,8 @@ export type TemperatureProviderProps = {
    * When set, `colors` is ignored.
    */
   colorScale?: ColorScaleEntryInput[];
+  /** Whether to animate value changes in TemperatureLabel. Defaults to true. */
+  animate?: boolean;
   children: React.ReactNode;
 };
 
@@ -144,6 +147,7 @@ export function TemperatureProvider({
   display,
   colors,
   colorScale,
+  animate = true,
   children,
 }: TemperatureProviderProps) {
   const ctx = useMemo<TemperatureContextValue>(
@@ -156,8 +160,9 @@ export function TemperatureProvider({
       }),
       unitSymbol: getUnitSymbol(display),
       colorScale: resolveColorScale({ colors, colorScale }),
+      animate,
     }),
-    [value, display, colors, colorScale]
+    [value, display, colors, colorScale, animate]
   );
 
   return (

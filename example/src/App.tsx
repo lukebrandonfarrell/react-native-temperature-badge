@@ -46,6 +46,11 @@ export default function App() {
             <TemperatureLabel />
           </TemperatureFrame>
         </TemperatureProvider>
+        <TemperatureProvider value={1} display="celsius">
+          <TemperatureFrame>
+            <TemperatureLabel />
+          </TemperatureFrame>
+        </TemperatureProvider>
         <TemperatureProvider value={8} display="celsius">
           <TemperatureFrame>
             <TemperatureLabel />
@@ -180,7 +185,7 @@ export default function App() {
       </Section>
 
       <Section title="Huge text & chunky">
-        <TemperatureProvider value={24} display="celsius">
+        <TemperatureProvider value={10} display="celsius">
           <TemperatureFrame
             style={{
               paddingHorizontal: 20,
@@ -202,7 +207,7 @@ export default function App() {
             <TemperatureLabel style={{ fontSize: 36, fontWeight: '700' }} />
           </TemperatureFrame>
         </TemperatureProvider>
-        <TemperatureProvider value={24} display="celsius">
+        <TemperatureProvider value={32} display="celsius">
           <TemperatureFrame
             style={{
               paddingHorizontal: 32,
