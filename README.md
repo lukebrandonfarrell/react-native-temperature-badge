@@ -13,8 +13,6 @@ A cross-platform temperature badge component for React Native and web. Display t
 - ➡️ **Accessible:** Sensible `accessibilityLabel`; `TemperatureFrame` forwards `Pressable` props.
 - ➡️ **Cross-platform:** React Native (iOS, Android) and web
 
----
-
 ## Installation
 
 ```sh
@@ -66,8 +64,6 @@ resolve: {
 ```
 
 The library uses standard React Native APIs (`Pressable`, `Text`) that `react-native-web` supports, so no additional configuration is needed beyond the bundler alias.
-
----
 
 ## Usage
 
@@ -151,8 +147,6 @@ Or display in the same unit as your source:
 </TemperatureFrame>
 ```
 
----
-
 ## API
 
 ### `Temperature.convert(value, options)`
@@ -175,8 +169,6 @@ Temperature.convert(100, { from: 'celsius', to: 'fahrenheit' });  // 212
 ```
 
 Throws `RangeError` if the result would be negative Kelvin.
-
----
 
 ### `TemperatureProvider`
 
@@ -222,8 +214,6 @@ Provides the temperature value, unit, and color scale to `TemperatureFrame` and 
 </TemperatureProvider>
 ```
 
----
-
 ### `TemperatureFrame`
 
 A `Pressable` that renders a pill-shaped container. Background color is chosen from the `TemperatureProvider`’s color scale based on the current temperature. Must be used inside `TemperatureProvider`.
@@ -238,8 +228,6 @@ A `Pressable` that renders a pill-shaped container. Background color is chosen f
 
 Default pill style: `paddingHorizontal: 12`, `paddingVertical: 6`, `borderRadius: 999`, `alignSelf: 'flex-start'`, and the computed `backgroundColor`.
 
----
-
 ### `TemperatureLabel`
 
 A `Text` that shows the temperature and unit (e.g. `22.00 °C`). Must be used inside `TemperatureProvider`. Accepts all `Text` props except `children` (the label is derived from context).
@@ -252,8 +240,6 @@ A `Text` that shows the temperature and unit (e.g. `22.00 °C`). Must be used in
 
 Format: `{displayValue.toFixed(2)}{unitSymbol}` (e.g. `°C`, `°F`, ` K`).
 
----
-
 ## Exported types
 
 - **`TemperatureUnit`** — `'fahrenheit' | 'kelvin' | 'celsius'`
@@ -261,13 +247,9 @@ Format: `{displayValue.toFixed(2)}{unitSymbol}` (e.g. `°C`, `°F`, ` K`).
 - **`DefaultScaleBand`** — `'veryCold' | 'cold' | 'cool' | 'mild' | 'warm' | 'hot'`
 - **`ColorScaleEntryInput`** — `{ celsius: number; color: string } | { fahrenheit: number; color: string } | { kelvin: number; color: string }`
 
----
-
 ## Default color scale
 
 `DEFAULT_TEMPERATURE_COLOR_SCALE` is exported for reference or to base custom scales on. It is an array of `{ kelvin: number; color: string }` with 6 steps from very cold to hot (e.g. slate/blue for cold, green for mild, yellow/red for warm/hot). `TemperatureProvider` uses this when neither `colors` nor `colorScale` is provided.
-
----
 
 ## Contributing
 
